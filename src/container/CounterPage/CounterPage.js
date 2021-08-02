@@ -35,6 +35,19 @@ const CounterPage = (props) => {
     });
     setData(newData);
   };
+  const onDeleteItemHandler = (id) => {
+    const newData = data.filter((food) => {
+      if (food.id !== id) return food
+    })
+    setData(newData);
+  };
+  const onResetItemHandler = (id) => {
+    const newData = data.map((food) => {
+      // return (food.id === id) ? food.count = 0 : food
+      return (food.id === id) ? { ...food, count: 0 } : food;
+    })
+    setData(newData);
+  };
   return (
     <div className="counterpage">
       <Header />
@@ -42,6 +55,8 @@ const CounterPage = (props) => {
         data={data}
         onIncrementHandler={onIncrementHandler}
         onDecrementHandler={onDecrementHandler}
+        onDeleteItemHandler={onDeleteItemHandler}
+        onResetItemHandler={onResetItemHandler}
       />
     </div>
   );

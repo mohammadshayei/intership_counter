@@ -7,6 +7,8 @@ const BodyContainer = (props) => {
       <ItemsContainer
         onDecrementHandler={props.onDecrementHandler}
         onIncrementHandler={props.onIncrementHandler}
+        onDeleteItemHandler={props.onDeleteItemHandler}
+        onResetItemHandler={props.onResetItemHandler}
         data={props.data}
       />
     </div>
