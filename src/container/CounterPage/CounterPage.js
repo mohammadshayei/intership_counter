@@ -26,6 +26,7 @@ const CounterPage = (props) => {
     });
     setData(newData);
   };
+
   const onDecrementHandler = (id) => {
     const newData = data.map((food) => {
       if (food.id === id) {
@@ -35,6 +36,26 @@ const CounterPage = (props) => {
     });
     setData(newData);
   };
+
+  const onDeleteItemHandler = (id) => {
+    const newData = data.filter(food => food.id !== id)
+    setData(newData);
+  };
+
+  const onResetItemHandler = (id) => {
+    const newData = data.map(food => {
+      if (food.id === id) {
+        return {
+          id: food.id,
+          name: food.name,
+          count: 0,
+        }
+      }
+      return food
+    });
+    setData(newData);
+  };
+
   return (
     <div className="counterpage">
       <Header />
@@ -42,6 +63,8 @@ const CounterPage = (props) => {
         data={data}
         onIncrementHandler={onIncrementHandler}
         onDecrementHandler={onDecrementHandler}
+        onDeleteItemHandler={onDeleteItemHandler}
+        onResetItemHandler={onResetItemHandler}
       />
     </div>
   );
