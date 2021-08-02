@@ -48,16 +48,32 @@ const CounterPage = (props) => {
     const newData = data.filter((food) => food.id !== id);
     setData(newData);
   };
-
+  const onAddButtonHandler = (name) => {
+    if (data.find((food) => food.name === name)) {
+      alert("exist");
+      return;
+    }
+    const newData = [
+      ...data,
+      {
+        id: data.length > 0 ? data[data.length - 1].id + 1 : 1,
+        name: name,
+        count: 0,
+      },
+    ];
+    setData(newData);
+  };
   return (
     <div className="counterpage">
       <Header />
+
       <BodyContainer
         data={data}
         onIncrementHandler={onIncrementHandler}
         onDecrementHandler={onDecrementHandler}
         onResetButtonHandler={onResetButtonHandler}
         onDeleteButtonHandler={onDeleteButtonHandler}
+        onAddButtonHandler={onAddButtonHandler}
       />
     </div>
   );
