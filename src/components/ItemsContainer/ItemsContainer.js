@@ -9,6 +9,8 @@ const ItemsContainer = (props) => {
           <Item
             onDecrementHandler={props.onDecrementHandler}
             onIncrementHandler={props.onIncrementHandler}
+            onDeleteButtonHandler={props.onDeleteButtonHandler}
+            onResetButtonHandler={props.onResetButtonHandler}
             count={food.count}
             title={food.name}
             id={food.id}
