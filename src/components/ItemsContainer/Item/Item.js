@@ -16,7 +16,6 @@ const Item = (props) => {
       <ChangeCountContainer
         onDecrementHandler={props.onDecrementHandler}
         onIncrementHandler={props.onIncrementHandler}
-        count={props.count}
         title={props.title}
         id={props.id}
       />

@@ -7,6 +7,11 @@ const initialState = {
       name: "pizza",
       count: 0,
     },
+    {
+      id: 2,
+      name: "adas polo",
+      count: 0,
+    },
   ],
 };
 

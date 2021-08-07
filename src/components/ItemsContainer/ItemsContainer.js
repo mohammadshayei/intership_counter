@@ -1,17 +1,17 @@
 import React from "react";
 import Item from "./Item/Item";
+import { useSelector } from "react-redux";
 import "./ItemsContainer.css";
+
 const ItemsContainer = (props) => {
+  const counter= useSelector((state) => state.counter);
   return (
     <div className="ItemsContainer">
-      {props.data.map((food) => {
+      {counter.dataFood.map((food) => {
         return (
           <Item
-            onDecrementHandler={props.onDecrementHandler}
-            onIncrementHandler={props.onIncrementHandler}
             onDeleteButtonHandler={props.onDeleteButtonHandler}
             onResetButtonHandler={props.onResetButtonHandler}
-            count={food.count}
             title={food.name}
             id={food.id}
           />
