@@ -6,3 +6,10 @@ export const incrementHandler = (id) => {
         id:id
     }
 }
+export const decrementHandler = (id) => {
+    return {
+        type: actionTypes.DECREMENT,
+        id:id
+    }
+}
+

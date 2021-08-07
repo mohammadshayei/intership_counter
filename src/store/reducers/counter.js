@@ -1,8 +1,7 @@
 import * as actionTypes from "../actions/actionTypes";
-import { updateObject } from "../utility";
 
 const initialState = {
-  data: [
+  dataFood: [
     {
       id: 1,
       name: "pizza",
@@ -11,14 +10,37 @@ const initialState = {
   ],
 };
 
-const incrementHandler = (state, action) => {
-  return;
+const onIncrementHandler = (state, action) => {
+  const newData = state.dataFood.map((food) => {
+    if (food.id === action.id) {
+      return { ...food, count: food.count + 1 };
+    }
+    return food;
+  });
+  return {
+    ...state,
+    dataFood: newData,
+  };
+};
+const onDecrementHandler = (state, action) => {
+  const newData = state.dataFood.map((food) => {
+    if (food.id === action.id) {
+      return food.count > 0 ? { ...food, count: food.count - 1 } : food;
+    }
+    return food;
+  });
+  return {
+    ...state,
+    dataFood: newData,
+  };
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.INCREMENT:
-      return incrementHandler(state, action);
+      return onIncrementHandler(state, action);
+    case actionTypes.DECREMENT:
+      return onDecrementHandler(state, action);
     default:
       return state;
   }
