@@ -9,6 +9,8 @@ const ChangeCountContainer = (props) => {
       <p>{props.count}</p>
       <p onClick={() => props.onDecrementHandler(props.id)}>-</p>
       <p>{props.title} </p>
+      <p>Price: {props.price} </p>
+      <p>{props.price * count}</p>
     </div>
   );
 };

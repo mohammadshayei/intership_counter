@@ -14,6 +14,7 @@ const ItemsContainer = (props) => {
             count={food.count}
             title={food.name}
             id={food.id}
+            price={food.price}
           />
         );
       })}

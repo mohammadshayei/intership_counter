@@ -22,6 +22,7 @@ const Item = (props) => {
         count={props.count}
         title={props.title}
         id={props.id}
+        price={props.price}
       />
     </div>
   );
