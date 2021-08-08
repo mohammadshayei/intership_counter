@@ -17,6 +17,7 @@ const Item = (props) => {
         onDecrementHandler={props.onDecrementHandler}
         onIncrementHandler={props.onIncrementHandler}
         title={props.title}
+        price={props.price}
         id={props.id}
       />
     </div>

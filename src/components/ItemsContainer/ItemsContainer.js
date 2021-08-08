@@ -5,6 +5,10 @@ import "./ItemsContainer.css";
 
 const ItemsContainer = (props) => {
   const counter= useSelector((state) => state.counter);
+
+
+
+  
   return (
     <div className="ItemsContainer">
       {counter.dataFood.map((food) => {
@@ -13,7 +17,9 @@ const ItemsContainer = (props) => {
             onDeleteButtonHandler={props.onDeleteButtonHandler}
             onResetButtonHandler={props.onResetButtonHandler}
             title={food.name}
+            price={food.price}
             id={food.id}
+            key={food.id}
           />
         );
       })}
