@@ -7,7 +7,6 @@ const ChangeCountContainer = (props) => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
   const [count, setCount] = useState(0);
-  const [subprices, setsubprices] = useState(0);
 
   const onIncrementHandler = (id) => {
     console.log('change count countainer -> on increment handler');
@@ -24,14 +23,7 @@ const ChangeCountContainer = (props) => {
       (food) => food.id === props.id
     ).count;
     setCount(founedCount);
-
-    const prices = counter.dataFood.map((food) => food.price * food.count);
-    const subprices = prices.reduce((accumulator, currentValue) => {
-      return (accumulator + currentValue)
-    })
-    setsubprices(subprices);
-    console.log('change count countainer -> use effect',);
-  }, [counter.dataFood, counter.subPrices]);
+  }, [counter.dataFood]);
 
   return (
     <div className="change-count-container">
@@ -43,7 +35,6 @@ const ChangeCountContainer = (props) => {
       <p>{props.title} </p>
       <p>{props.price}</p>
       <p>({props.price * count})  </p>
-      <p>{subprices}</p>
     </div>
   );
 };
