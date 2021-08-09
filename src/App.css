@@ -1,4 +1,5 @@
 .app-container {
   width: 100vw;
-  background-image: linear-gradient(to bottom right,rgb(219, 240, 185) , rgb(191, 238, 117),rgb(56, 179, 121))
+  background-color: rgb(2, 58, 14) ;
+  background-image: linear-gradient(to bottom right,rgb(2, 58, 14) , rgb(2, 55, 14),rgb(2, 51, 13))
 }

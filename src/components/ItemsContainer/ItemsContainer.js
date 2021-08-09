@@ -5,7 +5,8 @@ import "./ItemsContainer.css";
 
 const ItemsContainer = (props) => {
   const counter = useSelector((state) => state.counter);
-  const [subprices, setsubprices] = useState(0);
+  
+  // const [subprices, setsubprices] = useState(0);
   const [dataFood, setDataFood] = useState([]);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const ItemsContainer = (props) => {
     const subprices = prices.reduce((accumulator, currentValue) => {
       return (accumulator + currentValue)
     })
-    setsubprices(subprices);
+    // setsubprices(subprices);
     setDataFood(counter.dataFood)
     console.log('items countainer -> use effect', dataFood);
   }, [counter.dataFood]);
@@ -35,8 +36,7 @@ const ItemsContainer = (props) => {
         })}
 
         {/* {dataFood.length === 2 && <h2>hello seyed</h2>} */}
-        
-        <div className="factor-container">
+        {/* <div className="factor-container">
           <h3 className="factor-title">the facktor</h3>
           <table className="item-container-table">
             <tr>
@@ -62,7 +62,7 @@ const ItemsContainer = (props) => {
             )}
           </table>
           <h4 className="item-container-sub-prices">sub prices : {subprices}</h4>
-        </div>
+        </div> */}
       </div>
     </div>
   );
