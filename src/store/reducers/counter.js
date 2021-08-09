@@ -6,11 +6,19 @@ const initialState = {
       id: 1,
       name: "pizza",
       count: 0,
+      price: 85000,
     },
     {
       id: 2,
       name: "adas polo",
       count: 0,
+      price: 15000,
+    },
+    {
+      id: 3,
+      name: "lazania",
+      count: 0,
+      price: 65000,
     },
   ],
 };
@@ -39,6 +47,21 @@ const onDecrementHandler = (state, action) => {
     dataFood: newData,
   };
 };
+const onAddRecord = (state, action) => {
+  return {
+    ...state,
+    dataFood: [
+      ...state.dataFood,
+      {
+        id: state.dataFood.length+1,
+        name: action.name,
+        price: action.price,
+        count: 0,
+      },
+    ],
+  };
+  
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -46,6 +69,8 @@ const reducer = (state = initialState, action) => {
       return onIncrementHandler(state, action);
     case actionTypes.DECREMENT:
       return onDecrementHandler(state, action);
+    case actionTypes.ADD_RECORD:
+      return onAddRecord(state, action);
     default:
       return state;
   }

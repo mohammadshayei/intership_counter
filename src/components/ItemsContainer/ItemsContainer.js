@@ -13,6 +13,8 @@ const ItemsContainer = (props) => {
             onDeleteButtonHandler={props.onDeleteButtonHandler}
             onResetButtonHandler={props.onResetButtonHandler}
             title={food.name}
+            price={food.price}
+            count={food.count}
             id={food.id}
           />
         );

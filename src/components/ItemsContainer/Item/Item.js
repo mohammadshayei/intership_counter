@@ -19,6 +19,9 @@ const Item = (props) => {
         title={props.title}
         id={props.id}
       />
+      <p style={{color:'white'}}>
+        {props.price}
+      </p>
     </div>
   );
 };

@@ -12,4 +12,11 @@ export const decrementHandler = (id) => {
         id:id
     }
 }
+export const addRecordHandler = (name,price)=>{
+    return {
+        type: actionTypes.ADD_RECORD,
+        price : price ,
+        name : name
+    }
+}
 
