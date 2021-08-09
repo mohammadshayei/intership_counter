@@ -9,14 +9,14 @@ const BodyContainer = (props) => {
   }
   return (
     <div className="body-container">
-      <ItemsContainer
-        onResetButtonHandler={props.onResetButtonHandler}
-        onDeleteButtonHandler={props.onDeleteButtonHandler}
-      />
       <div className='add-container' >
         <input value={inputValue} onChange={onChange} />
         <Button onClick={()=>props.onAddButtonHandler(inputValue)}  title='ADD' />
       </div>
+      <ItemsContainer
+        onResetButtonHandler={props.onResetButtonHandler}
+        onDeleteButtonHandler={props.onDeleteButtonHandler}
+      />
     </div>
   );
 };

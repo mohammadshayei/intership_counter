@@ -3,3 +3,39 @@
     box-sizing: border-box;
     padding: 2rem;
 }
+.factor-container{
+    width: 92%;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 2rem;
+    border: 2px solid rgb(82, 114, 51);
+    border-radius: 15px;
+    background-color: rgba(211, 223, 200, 0.3);
+}
+.factor-title{
+    background-color: rgba(135, 222, 200, 0.2);
+    box-sizing: border-box;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 9px;
+}
+
+.item-container-sub-prices{
+    background-color: rgba(146, 172, 104, 0.2);
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.item-container-table{
+    width: 100%;
+    border:1px solid rgb(82, 114, 51)
+}
+
+.item-container-table td {
+    border: 1px solid rgb(6, 83, 64);
+    background-color: rgba(231, 247, 215, 0.288);
+}
+
+

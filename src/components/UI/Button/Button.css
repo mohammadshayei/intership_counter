@@ -1,9 +1,10 @@
 .button-container{
     width: 10rem;
     height: 2rem;
-    background-color: aqua;
+    background-color: rgb(183, 255, 116);
     border: none;
     outline: none;
     box-shadow: none;
     margin: 0 .5rem;
+    border-radius: 10px;
 }

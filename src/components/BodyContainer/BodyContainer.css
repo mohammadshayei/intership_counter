@@ -1,5 +1,5 @@
 .body-container{
-    height: calc(100% - 4.5rem);
+    /* height: calc(100% - 4.5rem); */
     padding: 3rem 4rem;
     box-sizing: border-box;
     overflow-y: auto ;

@@ -18,40 +18,52 @@ const ItemsContainer = (props) => {
     console.log('items countainer -> use effect', dataFood);
   }, [counter.dataFood]);
 
-
-
   return (
-    <div className="ItemsContainer">
-      {counter.dataFood.map((food) => {
-        return (
-          <Item
-            onDeleteButtonHandler={props.onDeleteButtonHandler}
-            onResetButtonHandler={props.onResetButtonHandler}
-            title={food.name}
-            price={food.price}
-            id={food.id}
-            key={food.id}
-          />
-        );
-      })}
-
-      {/* {dataFood.length === 2 && <h2>hello seyed</h2>} */}
-      <p>sub prices : {subprices}</p>
-      {dataFood.map(food =>{
-        if(food.count > 0){
+    <div>
+      <div className="ItemsContainer">
+        {counter.dataFood.map((food) => {
           return (
-            <p>
-          <span>id: {food.id}</span>
-          <span>/  name: {food.name}</span>
-          <span>/  count: {food.count}</span>
-          <span>/  price: {food.price}</span>
-          <span>/  sub price: {food.price * food.count}</span>
-        </p>
-          )
-        }
-      }
-      )}
-      {console.log('end:', dataFood)}
+            <Item
+              onDeleteButtonHandler={props.onDeleteButtonHandler}
+              onResetButtonHandler={props.onResetButtonHandler}
+              title={food.name}
+              price={food.price}
+              id={food.id}
+              key={food.id}
+            />
+          );
+        })}
+
+        {/* {dataFood.length === 2 && <h2>hello seyed</h2>} */}
+        
+        <div className="factor-container">
+          <h3 className="factor-title">the facktor</h3>
+          <table className="item-container-table">
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>count</th>
+              <th>price</th>
+              <th>sub price</th>
+            </tr>
+            {dataFood.map(food => {
+              if (food.count > 0) {
+                return (
+                  <tr>
+                    <td>{food.id}</td>
+                    <td>{food.name}</td>
+                    <td>{food.count}</td>
+                    <td>{food.price}</td>
+                    <td>{food.price * food.count}</td>
+                  </tr>
+                )
+              }
+            }
+            )}
+          </table>
+          <h4 className="item-container-sub-prices">sub prices : {subprices}</h4>
+        </div>
+      </div>
     </div>
   );
 };
