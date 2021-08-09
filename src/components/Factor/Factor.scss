@@ -7,6 +7,7 @@
     border: 2px solid rgb(82, 114, 51);
     border-radius: 15px;
     background-color: rgba(211, 223, 200, 0.3);
+    text-align: center;
 }
 .factor-title{
     background-color: rgba(135, 222, 200, 0.2);
@@ -33,5 +34,18 @@
     border: 1px solid rgb(6, 83, 64);
     background-color: rgba(231, 247, 215, 0.288);
 }
+.factor-container button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(86, 230, 146);
+    font-weight: bold;
+    padding: 0.7rem;
+    margin: 0.7rem;
+    border: none;
+    border-radius: 5px;
+}
 
+.factor-container button:hover{
+    color: rgb(19, 41, 27);
+    background-color: rgb(186, 235, 206);
+}
 

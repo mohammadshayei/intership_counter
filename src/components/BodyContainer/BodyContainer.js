@@ -18,12 +18,12 @@ const BodyContainer = (props) => {
     <div className="body-container">
       <Modal show={show} modalClosed={showModal}>
         <Factor />
-
       </Modal>
+
       <div className='add-container' >
         <input value={inputValue} onChange={onChange} />
+        <input value={inputValue} onChange={onChange} />
         <Button onClick={() => props.onAddButtonHandler(inputValue)} title='ADD' />
-
       </div>
       <ItemsContainer
         onResetButtonHandler={props.onResetButtonHandler}

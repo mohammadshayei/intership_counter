@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import './Factor.scss'
 import { useSelector } from "react-redux";
-import Button from '../../components/Factor/Factor'
+// import Button from '../../components/Factor/Factor'
 
 const Factor = () => {
 
@@ -17,7 +17,7 @@ const Factor = () => {
       })
       setsubprices(subprices);
       setDataFood(counter.dataFood)
-      console.log('items countainer -> use effect', dataFood);
+      console.log('factor -> use effect', dataFood);
     }, [counter.dataFood]);
   
 
@@ -48,7 +48,7 @@ const Factor = () => {
                 )}
             </table>
             <h4 className="item-container-sub-prices">sub prices : {subprices}</h4>
-            <Button />
+            <button>payment</button>
         </div>
     )
 }

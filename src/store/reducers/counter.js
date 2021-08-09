@@ -15,7 +15,8 @@ const initialState = {
       price: 10000,
     },
   ],
-  subPrices:10
+  // subPrices:10,
+
 };
 
 const onIncrementHandler = (state, action) => {
